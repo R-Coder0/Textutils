@@ -5,11 +5,11 @@ import NavBar from './Components/NavBar';
 import TextForm from './Components/TextForm';
 import Alert from './Components/Alert';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -40,19 +40,20 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <NavBar title="R-Coder" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-3">
-          <Routes>
+        <TextForm heading=" Enter the text to analyze" mode={mode} />
+          {/* <Routes>
             <Route path="/about" element={<About/>}>
               
-            </Route>
-            <Route path="/" element={<TextForm heading=" Enter the text to analyze" mode={mode} />}>
-            </Route>
-          </Routes>
+            </Route> */}
+            {/* <Route path="/" element={<TextForm heading=" Enter the text to analyze" mode={mode} />}>
+            </Route> */}
+          {/* </Routes> */}
         </div>
-      </Router>
+      {/* </Router> */}
 
     </>
   );
